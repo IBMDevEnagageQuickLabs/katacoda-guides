@@ -1,1 +1,0 @@
-This tutorial will give you an introduction to the Appsody part of the Kabanero developer experience. You'll create and deploy a Java MicroProfile based cloud-native application, however, Kabanero provides a number of stacks, including Node.js and Spring Boot and is extensible so others can easily be added. For more information, see Appsody.dev.
