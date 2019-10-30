@@ -1,0 +1,48 @@
+{
+  "title": "Interactive Tutorial - Configuring a Readiness Probe for a Java Microservice",
+  "description": "Test the health of two Java Microserives with health check",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "",
+        "text": "step1.md",
+        "code": "intro.sh"
+      },
+      {
+        "title": "",
+        "text": "step2.md"
+      },
+      {
+        "title": "",
+        "text": "step3.md"
+      },
+      {
+        "title": "",
+        "text": "step4.md"
+      }
+    ],
+  "intro": {
+    "text": "intro.md",
+    "courseData": "pre.sh"
+  },
+   "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {
+          "file": "kubernetes.yaml",
+          "target": "~/"
+        }
+      ]
+    }
+    },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "minikube"
+  }
+}
