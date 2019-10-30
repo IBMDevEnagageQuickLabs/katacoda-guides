@@ -116,7 +116,7 @@ You'll also need to add the package import for the annotation on line 25:
 
 Re-run your build and start the server by entering 'ctrl' + 'C' in to the terminal and:
 
-`mvn compile liberty:run`{{execute}}
+`mvn package liberty:run`{{execute}}
 
 Browse the OpenAPI endpoint <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a>
 
