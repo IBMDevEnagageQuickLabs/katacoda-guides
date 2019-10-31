@@ -23,5 +23,5 @@ Wait until you see the following message in the terminal:
 
 Now, when you visit the `/health` endpoint, additional traces are logged into the `trace.log` file:
 
-`guide-getting-started/start/src/target/liberty/wlp/usr/servers/defaultServer/logs/trace.log`{{open}}
+`guide-getting-started/start/target/liberty/wlp/usr/servers/defaultServer/logs/trace.log`{{open}}
 
