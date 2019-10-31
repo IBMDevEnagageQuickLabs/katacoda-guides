@@ -80,6 +80,9 @@ Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to chan
 
 `<greetingServiceGreeting>Bonjour</greetingServiceGreeting>`{{copy}}
 
+Start the server:
+
+`mvn liberty:dev`{{execute}}
 Call the service again to see the greeting change: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe">http://localhost:9080/mpservice/greeting/hello/John%20Doe</a>
 
 This example shows static config injection, where the configuration is read at server start-up.  MicroProfile and Open Liberty also support dynamic configuration injection which means the configuration is re-read periodically (e.g. every 500ms) and so does not require a server restart.
