@@ -53,7 +53,7 @@ CONTAINER ID    IMAGE                         CREATED          STATUS           
 4294a6bdf41b    openliberty-getting-started   9 seconds ago    Up 11 seconds    gettingstarted-app
 </pre>
 
-To access the application, visit the http://localhost:9080/system/properties URL.
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/system/properties">http://localhost:9080/system/properties</a>  URL.
 
 To stop and remove the container, run the following commands:
 
