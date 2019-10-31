@@ -56,31 +56,49 @@ public class SystemReadinessCheck implements HealthCheck {
 
 The `SystemReadinessCheck` class verifies that the `system` microservice is not in maintenance by checking a config property.
 
-Go to the directory that the `SystemReadinessCheck.java` will be saved
+Now we create the SystemLivenessCheck class:
 
-Now we create the SystemLivenessCheck class
+`guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemLivenessCheck.java`{{open}}
 
-Create a new file called `SystemLivenessCheck.java`
+and insert the following block of code into the file:
 
-`touch SystemLivenessCheck.java`{{execute}}
+<pre class="file" data-target="clipboard">
+package io.openliberty.sample.system;
 
-Open SystemLivenessCheck
+import javax.enterprise.context.ApplicationScoped;
 
-Next, recompile the application:
+import java.lang.management.MemoryMXBean;
+import java.lang.management.ManagementFactory;
 
-`mvn compile`{{execute}}
+import org.eclipse.microprofile.health.Liveness;
+import org.eclipse.microprofile.health.HealthCheck;
+import org.eclipse.microprofile.health.HealthCheckResponse;
 
-The following messages display in your first shell session:
+@Liveness
+@ApplicationScoped
+public class SystemLivenessCheck implements HealthCheck {
 
-<pre>
-[INFO] [AUDIT] CWWKT0017I: Web application removed (default_host): http://foo:9080/
-[INFO] [AUDIT] CWWKZ0009I: The application io.openliberty.guides.getting-started has stopped successfully.
-[INFO] [AUDIT] CWWKT0016I: Web application available (default_host): http://foo:9080/
-[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in xx.xx seconds.
+    @Override
+    public HealthCheckResponse call() {
+        MemoryMXBean memBean = ManagementFactory.getMemoryMXBean();
+        long memUsed = memBean.getHeapMemoryUsage().getUsed();
+        long memMax = memBean.getHeapMemoryUsage().getMax();
+
+        return HealthCheckResponse.named(
+            SystemResource.class.getSimpleName() + " liveness check")
+                                  .withData("memory used", memUsed)
+                                  .withData("memory max", memMax)
+                                  .state(memUsed < memMax * 0.9).build();
+    }
+
+}
 </pre>
 
 
-Access the /health endpoint again by visiting the <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a> URL. This time you see the overall status of your server as well as the aggregated data of the liveness and readiness checks for the system microservice: 
+The following message will display in the shell:
+`[INFO] [AUDIT] CWWKZ0003I: The application io.openliberty.guides.getting-started updated in xx.xx seconds.`
+
+Access the `/health` endpoint again by visiting the <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a> URL. This time you see the overall status of your server as well as the aggregated data of the liveness and readiness checks for the system microservice: 
 
 <pre>
 {
