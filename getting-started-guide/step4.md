@@ -14,7 +14,7 @@ The `component` element is a Java package or class, and the `level` element is o
 
 Try enabling detailed logging of the MicroProfile Health feature by adding the `<logging/>` element to your configuration file:
 
-`src/main/liberty/config/server.xml`{{open}}
+`guide-getting-started/start/src/main/liberty/config/server.xml`{{open}}
 
 `<logging traceSpecification="com.ibm.ws.microprofile.health.*=all" />`{{copy}}
 
