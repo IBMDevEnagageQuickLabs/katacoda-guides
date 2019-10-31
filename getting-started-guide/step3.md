@@ -50,11 +50,9 @@ import org.eclipse.microprofile.health.HealthCheckResponseBuilder;
 @ApplicationScoped
 // tag::systemReadinessCheck[]
 public class SystemReadinessCheck implements HealthCheck {
-
     @Inject
     @ConfigProperty(name = "io_openliberty_guides_system_inMaintenance")
     Provider<String> inMaintenance;
-	
     @Override
     public HealthCheckResponse call() {
         HealthCheckResponseBuilder builder = HealthCheckResponse.named(
@@ -64,7 +62,6 @@ public class SystemReadinessCheck implements HealthCheck {
         }
         return builder.withData("services", "available").up().build();
     }
-    
 }
 // end::systemReadinessCheck[]
 
