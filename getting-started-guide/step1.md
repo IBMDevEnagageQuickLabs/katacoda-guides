@@ -19,7 +19,7 @@ For more information on the Liberty Maven plug-in, see its <a href=https://githu
 
 When the server begins starting up, various messages display in your active shell. Wait for the following message, which indicates that the server startup is complete:
 
-`The server GettingStartedServer is ready to run a smarter planet.`
+`The defaultServer server is ready to run a smarter planet. The defaultServer server started in x.xxx seconds..”
 
 To access the `system` microservice, access the service endpoint to cause some application measurements to be recorded: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/system/properties"> http://localhost:9080/system/properties</a>.
 
