@@ -1,5 +1,5 @@
 ## Updating the server configuration without restarting the server
-Try updating the server configuration while the server is running. The `system` microservice does not currently include health monitoring to report whether the server and the microservice that it runs are healthy. You can add health reports with the MicroProfile Health feature, which adds a `/health` endpoint to your application. If you try to access this endpoint now at the  <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a> URL, you see a 404 error because the /health endpoint does not yet exist:
+Try updating the server configuration while the server is running. The `system` microservice does not currently include health monitoring to report whether the server and the microservice that it runs are healthy. You can add health reports with the MicroProfile Health feature, which adds a `/health` endpoint to your application. If you try to access this endpoint now at the  <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a> URL, you see a 404 error because the `/health` endpoint does not yet exist:
 
 `Error 404: java.io.FileNotFoundException: SRVE0190E: File not found: /health`
 
