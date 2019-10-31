@@ -2,9 +2,6 @@
 
 The JAX-RS application that contains your `system` microservice is configured as a loose application, meaning that it runs in a server from its `.class` file and other artifacts. Open Liberty automatically monitors these artifacts, and whenever they are updated, it updates the running server without the need for the server to be restarted.
 
-Navigate to the `pom.xml` file under start directory
-
-
 The loose application support is enabled with the `<looseApplication/>` element in the `liberty-maven-plugin` plug-in.
 
 
@@ -16,19 +13,11 @@ MicroProfile Health offers health checks for both readiness and liveness. A read
 
 ### Create the SystemReadinessCheck class.
 
-Head to the directory where the SystemReadinessCheck class will be created
-
-`cd src/main/java/io/openliberty/sample/system`{{execute}}
-
-Create SystemReadinessCheck class
-
-`touch SystemReadinessCheck.java`{{execute}}
-
-Open SystemReadinessCheck.java
+Create SystemReadinessCheck class:
 
 `/root/guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java`{{open}}
 
-Insert code into SystemReadinessCheck class
+and insert the following block of code into the file:
 
 <pre class="file" data-target="clipboard">
 package io.openliberty.sample.system;
