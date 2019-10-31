@@ -13,11 +13,9 @@ Install and run the server
 
 The mvn command initiates a Maven build, during which the target directory is created to store all build-related files.
 
-The install argument specifies the Maven install phase. During this phase, the application is built and packaged into a `.war` file, an Open Liberty server runtime is downloaded and installed into the target/liberty/wlp directory, a server instance is created and configured in the `target/liberty/wlp/usr/servers/GettingStartedServer` directory, and the application is installed into that server via loose config.
+The liberty:devargument specifies the Open Liberty dev goal, which invokes the create, install-feature, and deploy goals before starting the server.
 
-The liberty:run argument specifies the Open Liberty run-server goal, which starts an Open Liberty server instance in the foreground.
-
-For more information on the Liberty Maven plug-in, see its GitHub repository.
+For more information on the Liberty Maven plug-in, see its <a href=https://github.com/OpenLiberty/ci.maven/blob/master/docs/dev.md>GitHub repository</a>.
 
 When the server begins starting up, various messages display in your active shell. Wait for the following message, which indicates that the server startup is complete:
 
