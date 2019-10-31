@@ -9,7 +9,7 @@ Navigate to the start directory where your pom.xml file is located. Your pom.xml
 
 Install and run the server
 
-`mvn install liberty:run`{{execute}}
+`mvn liberty:dev`{{execute}}
 
 The mvn command initiates a Maven build, during which the target directory is created to store all build-related files.
 
@@ -31,13 +31,6 @@ To access the `system` microservice, access the service endpoint to cause some a
     `"java.version": "1.8.0_151",`
     `...`
 `}`
-
-
- Later, when you need to stop the server, simply press `CTRL+C` in the shell session where you ran the server. 
- Do not stop the server yet.
-
-
-Open up a new terminal window
 
 
 
