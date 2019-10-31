@@ -16,7 +16,8 @@
       },
       {
         "title": "Step 3",
-        "text": "step3.md"
+        "text": "step3.md",
+        "courseData": "createFile.sh"
       },
       {
         "title": "Step 4",
