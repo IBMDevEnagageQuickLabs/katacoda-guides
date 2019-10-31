@@ -11,19 +11,11 @@ and add the MicroProfile Health feature to the server by placing the mpHealth fe
 
 `<feature>mpHealth-2.0</feature>`{{copy}}
 
-When enabled, the `mpHealth` feature automatically adds a `/health` endpoint to the application. You can see the server being updated in the server log that’s displayed in your first shell session:
+When enabled, the `mpHealth` feature automatically adds a `/health` endpoint to the application. You can see the server being updated in the server log:
 
+`[INFO] [AUDIT   ] CWWKZ0003I: The application guide-getting-started updated in 0.385 seconds.`
 
-<pre>
-[INFO] [AUDIT] CWWKG0016I: Starting server configuration update.
-[INFO] [AUDIT] CWWKT0017I: Web application removed (default_host): http://foo:9080/
-[INFO] [AUDIT] CWWKZ0009I: The application io.openliberty.guides.getting-started has stopped successfully.
-[INFO] [AUDIT] CWWKG0017I: The server configuration was successfully updated in 0.284 seconds.
-[INFO] [AUDIT] CWWKT0016I: Web application available (default_host): http://foo:9080/health/
-[INFO] [AUDIT] CWWKF0012I: The server installed the following features: [mpHealth-1.0].
-[INFO] [AUDIT] CWWKF0008I: Feature update completed in 0.285 seconds.
-[INFO] [AUDIT] CWWKT0016I: Web application available (default_host): http://foo:9080/
-
+Now when you navigate to <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a>, you should see the following:
 <pre>
 {
     "checks":[],
