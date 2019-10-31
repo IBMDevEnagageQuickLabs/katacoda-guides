@@ -47,10 +47,6 @@ and add the following line:
 
 `<mpMetrics authentication="false" />`{{copy}}
 
-Rebuild and start the server by typing `ctrl` + `C` in to the terminal and then running the following command: 
-
-`mvn package liberty:run`{{execute}}
-
 Now when you access the metrics endpoint you will be able to access it over http and not be asked to authenticate: 
 
 <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/metrics/">http://localhost:9080/metrics/</a>.
@@ -80,13 +76,6 @@ Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to chan
 
 `<greetingServiceGreeting>Bonjour</greetingServiceGreeting>`{{copy}}
 
-Stop the server by typing `ctrl` + `C` in to the terminal.
-
-Start it again: 
-`mvn liberty:run`{{execute}}
-
-*Note: if you trigger a rebuild, the integration test will fail as it's expecting the response message to be "Hello". However, the server will still build and run.*
-
 Call the service again to see the greeting change: <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice/greeting/hello/John%20Doe">http://localhost:9080/mpservice/greeting/hello/John%20Doe</a>
 
 This example shows static config injection, where the configuration is read at server start-up.  MicroProfile and Open Liberty also support dynamic configuration injection which means the configuration is re-read periodically (e.g. every 500ms) and so does not require a server restart.
@@ -113,10 +102,6 @@ Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{
 You'll also need to add the package import for the annotation on line 25:
 
 `import org.eclipse.microprofile.openapi.annotations.Operation;`{{copy}}
-
-Re-run your build and start the server by entering 'ctrl' + 'C' in to the terminal and:
-
-`mvn package liberty:run`{{execute}}
 
 Browse the OpenAPI endpoint <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a>
 
