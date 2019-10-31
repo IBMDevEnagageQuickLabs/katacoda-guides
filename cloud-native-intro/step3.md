@@ -103,13 +103,15 @@ The second link is to a web page that gives a human-readable representation of t
 
 The machine-readable and Web page API descriptions are created automatically from the JAX-RS definition with no additional work required.  As a result, the information provided for your service is pretty basic.  One of the things MicroProfile OpenAPI provides is a number of annotations to enable you to provide better API documentation.
 
-Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}} to add documentation for the operation using the `@Operation` annotation after line 44:
+Edit the `/open-cloud-native-intro/src/main/java/my/demo/GreetingService.java`{{open}}:
 
-`@Operation(summary = "Get a greeting", description = "Returns a greeting for the provided name.")`{{copy}}
-
-You'll also need to add the package import for the annotation on line 25:
+Add the package import for the annotation on line 25:
 
 `import org.eclipse.microprofile.openapi.annotations.Operation;`{{copy}}
+
+To add documentation for the operation using `@Operation`, add the following after line 44:
+
+`@Operation(summary = "Get a greeting", description = "Returns a greeting for the provided name.")`{{copy}}
 
 Browse the OpenAPI endpoint <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/openapi/">http://localhost:9080/openapi/</a>
 
