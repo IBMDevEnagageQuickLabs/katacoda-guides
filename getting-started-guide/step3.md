@@ -20,6 +20,7 @@ Create SystemReadinessCheck class:
 and insert the following block of code into the file:
 
 <pre class="file" data-target="clipboard">
+
 package io.openliberty.sample.system;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -35,23 +36,25 @@ import org.eclipse.microprofile.health.HealthCheckResponseBuilder;
 
 @Readiness
 @ApplicationScoped
+// tag::systemReadinessCheck[]
 public class SystemReadinessCheck implements HealthCheck {
 
     @Inject
     @ConfigProperty(name = "io_openliberty_guides_system_inMaintenance")
     Provider<String> inMaintenance;
-
+	
     @Override
     public HealthCheckResponse call() {
         HealthCheckResponseBuilder builder = HealthCheckResponse.named(
-                SystemResource.class.getSimpleName() + " readiness check");
+		SystemResource.class.getSimpleName() + " readiness check");
         if (inMaintenance != null && inMaintenance.get().equalsIgnoreCase("true")) {
             return builder.withData("services", "not available").down().build();
         }
         return builder.withData("services", "available").up().build();
     }
-
+    
 }
+
 </pre>
 
 The `SystemReadinessCheck` class verifies that the `system` microservice is not in maintenance by checking a config property.
