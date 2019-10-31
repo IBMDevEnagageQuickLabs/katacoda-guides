@@ -20,7 +20,6 @@ Create SystemReadinessCheck class:
 and insert the following block of code into the file:
 
 <pre class="file" data-target="clipboard">
-
 // tag::copyright[]
 /*******************************************************************************
  * Copyright (c) 2018, 2019  IBM Corporation and others.
@@ -64,7 +63,6 @@ public class SystemReadinessCheck implements HealthCheck {
     }
 }
 // end::systemReadinessCheck[]
-
 </pre>
 
 The `SystemReadinessCheck` class verifies that the `system` microservice is not in maintenance by checking a config property.
