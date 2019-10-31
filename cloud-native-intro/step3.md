@@ -74,6 +74,7 @@ Line 98 of the`/open-cloud-native-intro/pom.xml`{{open}} file contains the confi
 Stop the server: 
 
 `q`{{execute}}
+
 This file is read at server startup and the value injected into the `GreetingService` bean when it is created.
 Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to change the greeting to `Bonjour`.
 
@@ -121,7 +122,9 @@ You'll see that your API now has additional documentation:
 ...
 ```
 
-Stop the server by entering `ctrl` + `C` in to the terminal. 
+Stop the server:
+
+`q`{{execute}}
 
 There are additional annotations available to help you document the parameters and more.
 
