@@ -15,7 +15,7 @@ MicroProfile Health offers health checks for both readiness and liveness. A read
 
 Create SystemReadinessCheck class:
 
-`src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java`{{open}}
+`guide-getting-started/start/src/main/java/io/openliberty/sample/system/SystemReadinessCheck.java;`{{open}}
 
 and insert the following block of code into the file:
 
