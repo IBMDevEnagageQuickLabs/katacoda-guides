@@ -51,7 +51,7 @@ import org.eclipse.microprofile.health.HealthCheckResponseBuilder;
 public class SystemReadinessCheck implements HealthCheck {
     @Inject
     @ConfigProperty(name = "io_openliberty_guides_system_inMaintenance")
-    Provider&#x22;String&#x22; inMaintenance;
+    Provider&lt;String&gt; inMaintenance;
     @Override
     public HealthCheckResponse call() {
         HealthCheckResponseBuilder builder = HealthCheckResponse.named(
