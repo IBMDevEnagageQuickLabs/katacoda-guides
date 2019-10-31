@@ -19,7 +19,7 @@ Try enabling detailed logging of the MicroProfile Health feature by adding the `
 `<logging traceSpecification="com.ibm.ws.microprofile.health.*=all" />`{{copy}}
 
 Wait until you see the following message in the terminal:
-`[INFO] [AUDIT   ] CWWKG0017I: The server configuration was successfully updated in 0.499 seconds.`
+`[INFO] [AUDIT   ] CWWKG0017I: The server configuration was successfully updated in x.xxx seconds.`
 
 Now, when you visit the `/health` endpoint, additional traces are logged into the `trace.log` file:
 
