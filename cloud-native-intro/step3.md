@@ -130,6 +130,8 @@ Stop the server:
 
 `q`{{execute}}
 
+Change the greeting back to "Hello" in line 98 in the `/open-cloud-native-intro/pom.xml`{{open}} file.
+
 There are additional annotations available to help you document the parameters and more.
 
 #### Further Reading
