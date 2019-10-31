@@ -1,9 +1,9 @@
 ## Building and running the application
 
-Your application is configured to be built with Maven. Every Maven-configured project contains a pom.xml file, which defines the project configuration, dependencies, plug-ins, and so on.
+Your application is configured to be built with Maven. Every Maven-configured project contains a `pom.xml` file, which defines the project configuration, dependencies, plug-ins, and so on.
 
 
-Navigate to the start directory where your pom.xml file is located. Your pom.xml file is configured to include the liberty-maven-plugin, which allows you to install applications into Open Liberty as well as manage the server instances.
+Navigate to the start directory where your `pom.xml` file is located. Your `pom.xml` file is configured to include the `liberty-maven-plugin`, which allows you to install applications into Open Liberty as well as manage the server instances.
 
 `cd guide-getting-started/start`{{execute}}
 
