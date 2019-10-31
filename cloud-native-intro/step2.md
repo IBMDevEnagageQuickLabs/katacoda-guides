@@ -8,9 +8,9 @@ Build and run the microservice application:
 
 `mvn liberty:dev`{{execute}}
 
-Building the application (`mvn install`) also downloads Open Liberty from Maven Central and installs it to `target/liberty`. The build also packages the application in the `target` directory in a WAR file, called `mpservice.war` and creates a minimal runnable jar containing Open Liberty and the application, called `mpservice.jar`. The `liberty:run` command (Maven goal) starts the `mpserviceServer` server in the `target/liberty` directory.
+The goal, dev, invokes the create, install-feature, and deploy goals before starting the server. Note: This goal is designed to be executed directly from the Maven command line. To exit dev mode, press `Control`-`C`, or type `q` and press Enter.
 
-Note: you will see some warnings from the server relating to SSL configuration. These are expected and will be addressed later.
+Dev mode provides three key features. Code changes are detected, recompiled, and picked up by your running server. Unit and integration tests are run on demand when you press Enter in the command terminal where dev mode is running, or optionally on every code change to give you instant feedback on the status of your code. Finally, it allows you to attach a debugger to the running server at any time to step through your code.
 
 To see what the app does, open a web browser at the following URL: 
 <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/mpservice">http://localhost:9080/mpservice</a>
