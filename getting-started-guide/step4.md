@@ -23,5 +23,8 @@ Wait until you see the following message in the terminal:
 
 Now, when you visit the `/health` endpoint, additional traces are logged into the `trace.log` file:
 
+<a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health/ready"> http://localhost:9080/health</a>
+
+
 `guide-getting-started/start/target/liberty/wlp/usr/servers/defaultServer/logs/trace.log`{{open}}
 
