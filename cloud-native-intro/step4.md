@@ -20,7 +20,7 @@ In the `usr-package` build we also use the name `defaultServer` for the server b
 
 #### Build and run in Docker
 
-In the directory where the `Dockerfile` is located run: 
+Build the Docker image:
 
 `docker build -t my-demo:mpservice .`{{execute}}
 
