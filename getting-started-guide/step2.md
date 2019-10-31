@@ -13,7 +13,7 @@ and add the MicroProfile Health feature to the server by placing the mpHealth fe
 
 When enabled, the `mpHealth` feature automatically adds a `/health` endpoint to the application. You can see the server being updated in the server log:
 
-`[INFO] [AUDIT   ] CWWKZ0003I: The application guide-getting-started updated in 0.385 seconds.`
+`[INFO] [AUDIT   ] CWWKZ0003I: The application guide-getting-started updated in x.xxx seconds.`
 
 Now when you navigate to <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/health"> http://localhost:9080/health</a>, you should see the following:
 <pre>
