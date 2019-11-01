@@ -22,4 +22,4 @@ For each deployment, you can find information relating to the readiness probe, p
 
 The Kubernetes readiness probes in these services are implemented using MicroProfile health. The two Docker images that are being used for this tutorial have classes annotated with `@Health` that are integrated with CDI. Run the following command to have a look inside one of the classes used in this tutorial. This is just a simple class that contains a method `setUnhealthy()` that will make the service unhealthy for 60 seconds that allows the tutorial to demonstrate how useful this can be with Kubernetes. Once you have run the following command and had a look at the code behind the service please move on to the next step.
 
-`cat guide-kubernetes-microprofile-health/finish/name/src/main/java/io/openliberty/guides/name/NameHealth.java`{{execute}}
+`cat guide-kubernetes-microprofile-health/finish/system/src/main/java/io/openliberty/guides/ystem/SystemReadinessCheck.java`{{execute}}
