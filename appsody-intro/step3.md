@@ -27,7 +27,7 @@ Take note of the port number `http://localhost:<PORT_NUMBER>` `e.g: 30000` as yo
 
 <a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/resource"> http://localhost:30000/resource</a>
 
-Type in the port number into the katacoda webpage to access the end point.
+Type in the port number into the katacoda webpage and add `/resource`{{copy}} to the end of the URL in your browser's search bar to access the end point.
 
 You should now see the response from your JAX-RS resource.
 
@@ -80,16 +80,17 @@ drwxr-xr-x  3 nastacio  staff     96 Oct  8 14:02 test
 
 The `app-deploy.yaml` is generated from the stack and used to deploy to Kubernetes. If you look inside the file, you’ll see entries for `liveness` and `readiness` probes, metrics, and the service port.
 
-Check out the `liveness` and `readiness` endpoints by pointing your browser at the following URLs, remembering to replace the port numbers with the port numbers from the output of the `appsody deploy` command:
+Check out the `liveness` and `readiness` endpoints by pointing your browser at the following URLs. Remember to replace the port numbers with the port numbers from the output of the `appsody deploy` command and then add `/live`{{copy}} and `/ready`{{copy}} to the end of the URL's in your browser's search bar. 
 
-<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/live"> http://localhost:30000/live</a>
+<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/live"> http://localhost:PORT/live</a>
 
-<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/ready"> http://localhost:30000/ready</a>
+
+<a href="https://[[HOST_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/ready"> http://localhost:PORT/ready</a>
 
 You should see something like:
 
 <pre>
-// http://localhost:30062/ready
+// http://localhost:PORT/ready
 
 {
     "status":"UP",
