@@ -3,21 +3,16 @@
 So far, Open Liberty has been running out of the `target/liberty/wlp` directory, which effectively contains an Open Liberty server installation and the deployed application. The final product of the Maven build is a server package for use in a continuous integration pipeline and, ultimately, a production deployment.
 
 
-Open Liberty supports a number of different server packages. The sample application currently generates a usr package that contains the servers and application to be extracted onto an Open Liberty installation.
+Open Liberty supports a number of different server packages. The sample application currently generates a `usr` package that contains the servers and application to be extracted onto an Open Liberty installation.
 
-
-The type of server package is configured with `<packaging.type/>` in the `pom.xml`.
-
-Instead of creating a server package, you can generate a runnable JAR file that contains the application along with a server runtime. This JAR can then be run anywhere and deploy your application and server at the same time. To generate a runnable JAR, invoke the `runnable-package` profile by using the `-P` flag:
+TInstead of creating a server package, you can generate a runnable JAR file that contains the application along with a server runtime. This JAR file can then be run anywhere and deploy your application and server at the same time. To generate a runnable JAR file, override the `include` property:
 
 `mvn liberty:package -Dinclude=runnable`{{execute}}
 
-The `-P` flag specifies the Maven profile to be run during the build. In this case, the `runnable-package` profile is invoked, which temporarily overrides the `packaging.type` property from the usr package to the runnable package. This property then propagates to the liberty-maven-plugin plug-in, which generates the server package that you want.
+The packaging type is overridden from the `usr` package to the `runnable` package. This property then propagates to the `liberty-maven-plugin` plug-in, which generates the server package based on the `openliberty-kernel` package.
 
-
-When the build completes, you can find the runnable `getting-started.jar` file in the `target` directory. By default, this JAR file comes with all the features available in Open Liberty, including the entirety of Java EE and MicroProfile. As a result, this JAR is over 100 MB. To omit the features that you don’t need and package the JAR with only the `features` that you defined in the `server.xml` file, use `minifiy,runnable` as the packaging type. 
-
-To run the JAR, first stop the server if it’s running. Then, navigate to the `target` directory and run the `java -jar` command:
+When the build completes, you can find the minimal runnable guide-getting-started.jar file in the `target` directory. This JAR file contains only the features that you explicitly enabled in your server.xml file. As a result, the generated JAR file is only about 50 MB.
+To run the JAR file, first stop the server if it’s running. Then, navigate to the `target` directory and run the `java -jar` command:
 
 `cd target`{{execute}}
 
