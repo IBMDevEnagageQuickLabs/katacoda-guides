@@ -53,7 +53,7 @@ Open up the app.js file:
 Insert to modify the app.js source file to include the extra "/resource" REST path:
 
 Copy the following block and add it to app.js
-<pre>
+<pre class="file" data-target="clipboard">
 app.get('/resource', (req, res) => {
   res.send("Resource from Appsody!");
 });
