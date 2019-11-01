@@ -15,13 +15,6 @@ Create the new project. This project will be using the Node.JS Express framework
 When the build completes, you should see something like:
 
 <pre>
-...
-[InitScript] [INFO] ------------------------------------------------------------------------
-[InitScript] [INFO] BUILD SUCCESS
-[InitScript] [INFO] ------------------------------------------------------------------------
-[InitScript] [INFO] Total time: 0.800 s
-[InitScript] [INFO] Finished at: 2019-09-02T15:52:41+01:00
-[InitScript] [INFO] ------------------------------------------------------------------------
 Successfully initialized Appsody project
 </pre>
 
