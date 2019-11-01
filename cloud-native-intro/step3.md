@@ -69,14 +69,14 @@ Externalizing configuration is one of the key tenets of <a href="https://12facto
 
 The tutorial application has also included the use of MicroProfile Config for injecting a configuration property using `@ConfigProperty`.  Open Liberty supports a number of `config sources`.  The tutorial shows the use of Open Liberty `bootstrap.properties`.  
 
-Line 98 of the`/open-cloud-native-intro/pom.xml`{{open}} file contains the configuration for the greeting. The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`{{open}}
+Line 100 of the`/open-cloud-native-intro/pom.xml`{{open}} file contains the configuration for the greeting. The maven build puts this value in: `/open-cloud-native-intro/target/ilberty/wlp/usr/servers/mpserviceServer/bootstrap.properites`{{open}}
 
 Stop the server: 
 
 `q`{{execute}}
 
 This file is read at server startup and the value injected into the `GreetingService` bean when it is created.
-Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 98 to change the greeting to `Bonjour`.
+Edit the `/open-cloud-native-intro/pom.xml`{{open}} by replacing line 100 to change the greeting to `Bonjour`.
 
 `<greetingServiceGreeting>Bonjour</greetingServiceGreeting>`{{copy}}
 
@@ -132,7 +132,7 @@ Stop the server:
 
 `q`{{execute}}
 
-Change the greeting back to "Hello" in line 98 in the `/open-cloud-native-intro/pom.xml`{{open}} file.
+Change the greeting back to "Hello" in line 100 in the `/open-cloud-native-intro/pom.xml`{{open}} file.
 
 There are additional annotations available to help you document the parameters and more.
 
