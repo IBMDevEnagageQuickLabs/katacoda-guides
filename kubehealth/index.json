@@ -1,5 +1,5 @@
 {
-  "title": "Interactive Tutorial - Configuring a Readiness Probe for a Java Microservice",
+  "title": "Configuring a Readiness Probe for a Java Microservice",
   "description": "Test the health of two Java Microserives with health check",
   "difficulty": "beginner",
   "time": "15 minutes",
