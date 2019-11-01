@@ -15,17 +15,13 @@ Instead of creating a server package, you can generate a runnable JAR file that 
 The `-P` flag specifies the Maven profile to be run during the build. In this case, the `runnable-package` profile is invoked, which temporarily overrides the `packaging.type` property from the usr package to the runnable package. This property then propagates to the liberty-maven-plugin plug-in, which generates the server package that you want.
 
 
-When the build completes, you can find the runnable `getting-started.jar` file in the `target` directory. By default, this JAR file comes with all the features available in Open Liberty, including the entirety of Java EE and MicroProfile. As a result, this JAR is over 100 MB. To omit the features that you don’t need and package the JAR with only the `features` that you defined in the `server.xml` file, use `minifiy,runnable` as the packaging type. To build a minimal runnable JAR, invoke the `minify-runnable-package` profile by using the `-P` flag:
-
-`mvn install -P minify-runnable-package`{{execute}}
-
-The `minify-runnable-package` profile overrides the `packaging.type` property from the `usr` package to the `minify,runnable` package and generates a runnable JAR file that contains only the `features` that you explicitly enabled in your `server.xml` file. As a result, the generated JAR is only about 50 MB.
+When the build completes, you can find the runnable `getting-started.jar` file in the `target` directory. By default, this JAR file comes with all the features available in Open Liberty, including the entirety of Java EE and MicroProfile. As a result, this JAR is over 100 MB. To omit the features that you don’t need and package the JAR with only the `features` that you defined in the `server.xml` file, use `minifiy,runnable` as the packaging type. 
 
 To run the JAR, first stop the server if it’s running. Then, navigate to the `target` directory and run the `java -jar` command:
 
 `cd target`{{execute}}
 
-`java -jar getting-started.jar`{{execute}}
+`java -jar guide-getting-started.jar`{{execute}}
 
 When the server starts, visit the <a href="https://[[HOST_SUBDOMAIN]]-9080-[[KATACODA_HOST]].environments.katacoda.com/system/properties">http://localhost:9080/system/properties</a> URL to access your application that is now running out of the minimal runnable JAR.
 
