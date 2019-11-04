@@ -9,6 +9,8 @@ Change directories to build the docker containers:
 
 `cd ..`{{execute}}
 
+Run the following command to package the server and create a `.war` file:
+
 `mvn package`{{execute}}
 
 To build and containerize the application, start your Docker daemon and run the following command:
