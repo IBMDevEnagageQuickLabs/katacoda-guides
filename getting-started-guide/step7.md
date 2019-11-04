@@ -4,11 +4,12 @@ To run the application in a container, you need to have Docker installed. For in
 
 To containerize the application, you need a `Dockerfile`. This file contains a collection of instructions that define how a Docker image is built, what files are packaged into it, what commands run when the image runs as a container, and so on. You can find a complete `Dockerfile` in the `start` directory. This `Dockerfile` packages the `usr` server package into a Docker image that contains a preconfigured Open Liberty server.
 
-`mvn package`{{execute}}
 
 Change directories to build the docker containers:
 
 `cd ..`{{execute}}
+
+`mvn package`{{execute}}
 
 To build and containerize the application, start your Docker daemon and run the following command:
 
