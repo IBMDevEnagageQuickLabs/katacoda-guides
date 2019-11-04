@@ -40,7 +40,7 @@ Call the updated system service and check the headers using the curl command:
 
 You should see that the response `X-App-Name` header has changed from `system` to `my-system`​.
 
-Verify that inventory service is now using the Kubernetes Secret for the credentials by making the following curl request:
+Verify that inventory service is now using the Kubernetes Secret for the credentials by making the following curl request (This may take several minutes):
 
 `curl http://$IP:32000/inventory/systems/system-service`{{execute}}
 
