@@ -16,7 +16,7 @@ You need to set the variable IP to the IP address of your Kubernetes cluster by 
 
 `IP=$(minikube ip)`{{execute}}
 
-When you run the following command it will use the IP address of your cluster.
+When you run the following command it will use the IP address of your cluster (This may take several minutes).
 
 `curl http://$IP:31000/api/name`{{execute}}
 
